@@ -24,9 +24,10 @@ class Twitter extends Provider
     public function __construct($endpoint = null, array $schemes = array(), $url = null, $name = null)
     {
         return parent::__construct(
-            'https://api.twitter.com/1.1/statuses/oembed.json',
+            'https://api.twitter.com/1/statuses/oembed.json',
             array(
-                'http://twitter.com/*/status/*'
+                'http://twitter.com/*/status/*',
+                'https://twitter.com/*/status/*',
             ),
             'http://twitter.com',
             'Twitter'
