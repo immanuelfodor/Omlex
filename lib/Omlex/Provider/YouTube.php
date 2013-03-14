@@ -29,6 +29,9 @@ class YouTube extends Provider
             'http://www.youtube.com/oembed',
             array(
                 'http://*.youtube.com/*',
+                'https://*.youtube.com/*',
+                'http://*.youtu.be/*',
+                'https://*.youtu.be/*',
             ),
             'http://www.youtube.com',
             'YouTube'
