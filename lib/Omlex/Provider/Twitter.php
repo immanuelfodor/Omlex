@@ -14,11 +14,9 @@ namespace Omlex\Provider;
 use Omlex\Provider;
 
 /**
- * YouTube provider.
- *
- * @author Michael H. Arieli <excelwebzone@gmail.com>
+ * @author  Evert Harmeling <evert.harmeling@freshheads.com>
  */
-class YouTube extends Provider
+class Twitter extends Provider
 {
     /**
      * {@inheritdoc}
@@ -26,15 +24,13 @@ class YouTube extends Provider
     public function __construct($endpoint = null, array $schemes = array(), $url = null, $name = null)
     {
         return parent::__construct(
-            'http://www.youtube.com/oembed',
+            'https://api.twitter.com/1/statuses/oembed.json',
             array(
-                'http://*.youtube.com/*',
-                'https://*.youtube.com/*',
-                'http://*.youtu.be/*',
-                'https://*.youtu.be/*',
+                'http://twitter.com/*/status/*',
+                'https://twitter.com/*/status/*',
             ),
-            'http://www.youtube.com',
-            'YouTube'
+            'http://twitter.com',
+            'Twitter'
         );
     }
 }

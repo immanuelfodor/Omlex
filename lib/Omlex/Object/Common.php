@@ -48,7 +48,7 @@ abstract class Common
         $this->required[] = 'version';
 
         foreach ($this->required as $field) {
-            if (!isset($this->$field)) {
+            if (!property_exists($this->object, $field)) {
                 throw new ObjectException(sprintf('Object is missing required "%s" attribute', $field));
             }
         }
