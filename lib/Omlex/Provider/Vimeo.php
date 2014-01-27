@@ -29,7 +29,7 @@ class Vimeo extends Provider
             'http://www.vimeo.com/api/oembed.json', //or xml
             array(
                 'http://*.vimeo.com/*',
-                'http://*.vimeo.com/groups/*/*',
+                'https://*.vimeo.com/*',
             ),
             'http://www.vimeo.com',
             'Vimeo'
