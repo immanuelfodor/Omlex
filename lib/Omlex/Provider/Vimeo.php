@@ -26,10 +26,10 @@ class Vimeo extends Provider
     public function __construct($endpoint = null, array $schemes = array(), $url = null, $name = null)
     {
         return parent::__construct(
-            'http://vimeo.com/api/oembed.json', //or xml
+            'http://www.vimeo.com/api/oembed.json', //or xml
             array(
                 'http://*.vimeo.com/*',
-                'https://*.vimeo.com/*',
+                'http://*.vimeo.com/groups/*/*',
             ),
             'http://www.vimeo.com',
             'Vimeo'
