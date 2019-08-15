@@ -102,7 +102,7 @@ class OEmbedTest extends \PHPUnit_Framework_TestCase
 
         try {
             $object = $this->getObject($this->error);
-        } catch (ObjectException $e) {
+        } catch (OmlexObjectException $e) {
             return;
         }
 
