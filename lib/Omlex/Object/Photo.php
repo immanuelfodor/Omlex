@@ -9,20 +9,26 @@
  * file that was distributed with this source code.
  */
 
-namespace Omlex\OmlexObject;
+namespace Omlex\Object;
 
 /**
- * Link object.
+ * Photo object.
  *
  * @author Michael H. Arieli <excelwebzone@gmail.com>
  */
-class Link extends Common
+class Photo extends Common
 {
+    protected $required = array(
+        'url', 'width', 'height'
+    );
+
     /**
      * {@inheritdoc}
      */
     public function __toString()
     {
-        return sprintf('<a href="%s">%s</a>', $this->url, $this->title);
+        $title = isset($this->title) ? $this->title : null;
+
+        return sprintf('<img src="%s" width="%s" height="%s" alt="%s" />', $this->url, $this->width, $this->height, $title);
     }
 }

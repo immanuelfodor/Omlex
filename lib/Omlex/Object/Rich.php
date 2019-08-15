@@ -9,13 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace Omlex\Exception;
+namespace Omlex\Object;
 
 /**
- * Exception for {@see OmlexObject}.
+ * Rich object.
  *
  * @author Michael H. Arieli <excelwebzone@gmail.com>
  */
-class OmlexObjectException extends Exception
+class Rich extends Common
 {
+    protected $required = array(
+        'html', 'width', 'height'
+    );
+
+    /**
+     * {@inheritdoc}
+     */
+    public function __toString()
+    {
+        return $this->html;
+    }
 }

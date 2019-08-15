@@ -9,24 +9,20 @@
  * file that was distributed with this source code.
  */
 
-namespace Omlex\OmlexObject;
+namespace Omlex\Object;
 
 /**
- * Video object.
+ * Link object.
  *
  * @author Michael H. Arieli <excelwebzone@gmail.com>
  */
-class Video extends Common
+class Link extends Common
 {
-    protected $required = array(
-        'html', 'width', 'height'
-    );
-
     /**
      * {@inheritdoc}
      */
     public function __toString()
     {
-        return $this->html;
+        return sprintf('<a href="%s">%s</a>', $this->url, $this->title);
     }
 }

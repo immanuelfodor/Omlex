@@ -9,17 +9,17 @@
  * file that was distributed with this source code.
  */
 
-namespace Omlex\OmlexObject;
+namespace Omlex\Object;
 
 /**
- * Photo object.
+ * Video object.
  *
  * @author Michael H. Arieli <excelwebzone@gmail.com>
  */
-class Photo extends Common
+class Video extends Common
 {
     protected $required = array(
-        'url', 'width', 'height'
+        'html', 'width', 'height'
     );
 
     /**
@@ -27,8 +27,6 @@ class Photo extends Common
      */
     public function __toString()
     {
-        $title = isset($this->title) ? $this->title : null;
-
-        return sprintf('<img src="%s" width="%s" height="%s" alt="%s" />', $this->url, $this->width, $this->height, $title);
+        return $this->html;
     }
 }

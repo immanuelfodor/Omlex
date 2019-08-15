@@ -4,7 +4,7 @@ namespace Omlex;
 
 use Omlex\OEmbed;
 use Omlex\OmlexObject;
-use Omlex\Exception\OmlexObjectException;
+use Omlex\Exception\ObjectException;
 
 class OEmbedTest extends \PHPUnit_Framework_TestCase
 {
@@ -82,7 +82,7 @@ class OEmbedTest extends \PHPUnit_Framework_TestCase
         foreach ($this->objects as $type => $test) {
             $object = $this->getObject($test);
 
-            $expectedObject = '\\Omlex\\OmlexObject\\' . ucfirst($type);
+            $expectedObject = '\\Omlex\\Object\\' . ucfirst($type);
             $this->assertInstanceof($expectedObject, $object);
 
             foreach ($test['expected'] as $key => $val) {
@@ -98,11 +98,11 @@ class OEmbedTest extends \PHPUnit_Framework_TestCase
      */
     public function testError()
     {
-        $this->markTestSkipped('OmlexObject seems to be valid');
+        $this->markTestSkipped('Object seems to be valid');
 
         try {
             $object = $this->getObject($this->error);
-        } catch (OmlexObjectException $e) {
+        } catch (ObjectException $e) {
             return;
         }
 
@@ -171,7 +171,7 @@ class OEmbedTest extends \PHPUnit_Framework_TestCase
      *
      * @param array $test The test object to fetch
      *
-     * @return object Instance of OmlexObject
+     * @return OmlexObject Instance of Object
      */
     protected function getObject(array $test)
     {

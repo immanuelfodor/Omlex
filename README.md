@@ -1,7 +1,7 @@
 Omlex
 =====
 
-This is a lightweight PHP 7.2 library for handling oEmbed services (upgraded from 5.3 in this fork)
+This is a lightweight PHP 5.3 library for handling oEmbed services.
 
 ```php
 <?php
@@ -21,7 +21,7 @@ echo $object->__toString();
 Here is the result for <code>print_r($object)</code>:
 
 ```
-Omlex\OmlexObject\Photo OmlexObject
+Omlex\Object\Photo Object
 (
     [required:protected] => Array
         (
@@ -31,7 +31,7 @@ Omlex\OmlexObject\Photo OmlexObject
             [3] => version
         )
 
-    [object:protected] => stdClass OmlexObject
+    [object:protected] => stdClass Object
         (
             [version] => 1.0
             [type] => photo

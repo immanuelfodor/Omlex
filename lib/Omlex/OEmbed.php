@@ -279,7 +279,7 @@ class OEmbed
      *
      * @param array $params Optional parameters for
      *
-     * @return object The oEmbed response as an object
+     * @return OmlexObject The oEmbed response as an object
      *
      * @throws \RuntimeException         On HTTP errors
      * @throws \InvalidArgumentException when result is not parsable
