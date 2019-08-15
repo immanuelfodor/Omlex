@@ -21,7 +21,7 @@ echo $object->__toString();
 Here is the result for <code>print_r($object)</code>:
 
 ```
-Omlex\Object\Photo Object
+Omlex\OmlexObject\Photo OmlexObject
 (
     [required:protected] => Array
         (
@@ -31,7 +31,7 @@ Omlex\Object\Photo Object
             [3] => version
         )
 
-    [object:protected] => stdClass Object
+    [object:protected] => stdClass OmlexObject
         (
             [version] => 1.0
             [type] => photo

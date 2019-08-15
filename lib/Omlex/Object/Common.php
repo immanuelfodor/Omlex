@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Omlex\Object;
+namespace Omlex\OmlexObject;
 
-use Omlex\Exception\ObjectException;
+use Omlex\Exception\OmlexObjectException;
 
 /**
  * Base class for objects.
@@ -39,7 +39,7 @@ abstract class Common
      *
      * @param object $object Raw object returned from the API
      *
-     * @throws ObjectException on missing fields
+     * @throws OmlexObjectException on missing fields
      */
     public function __construct($object)
     {
@@ -49,7 +49,7 @@ abstract class Common
 
         foreach ($this->required as $field) {
             if (!property_exists($this->object, $field)) {
-                throw new ObjectException(sprintf('Object is missing required "%s" attribute', $field));
+                throw new OmlexObjectException(sprintf('OmlexObject is missing required "%s" attribute', $field));
             }
         }
     }

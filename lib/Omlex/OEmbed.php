@@ -337,7 +337,7 @@ class OEmbed
                 break;
         }
 
-        return Object::factory($data);
+        return OmlexObject::factory($data);
     }
 
     /**
