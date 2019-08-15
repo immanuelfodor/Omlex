@@ -1,7 +1,7 @@
 Omlex
 =====
 
-This is a lightweight PHP 5.3 library for handling oEmbed services.
+This is a lightweight PHP 7.2 library for handling oEmbed services (upgraded from 5.3 in this fork)
 
 ```php
 <?php
